@@ -5,17 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="screenshots/favicon">
     <title>Meeting Minute</title>
+    <!-- Internal css -->
+    <style>
+        h2 {
+            color: rgb(11, 142, 80);
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1>Meeting Minute</h1>
+        <h1 class="title" style="color: rgb(244, 198, 99); background-color: hsla(108, 47%, 37%, 1);">Meeting Minute</h1>
         <section>
             <h2>CSE 110 - Team 32</h2>
             <img src="screenshots/memory-munchers.png" alt="team-logo">
-            <h3>Meeting Information</h3>
+            <h3 class="info">Meeting Information</h3>
             <details>
                 <summary>
                     <strong>Date and Time</strong>
@@ -127,7 +134,7 @@
             <h3>Miscellous</h3>
             <h4>Team informarion</h4>
             <p>Dev: Thanh Trinh</p>
-            <video controls>
+            <video controls class="video">
                 <source src="myVideo.mp4" type="video/mp4">
                     Your browser doesn't support HTML video. Here is a
                     <a href="https://drive.google.com/drive/u/2/folders/10HxZps7zGc9pb-E9mpcksquoUo7yiih4" download="myVideo.mov">link to the video</a> instead.
@@ -150,40 +157,42 @@
     <hr>
     <footer>
         <h3>Feedbacks and Opinion</h3>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name">
-            <select name="year" id="year">
-                <option value="">What is your year</option>
-                <option value="1">First year</option>
-                <option value="2">Second year</option>
-                <option value="3">Third year</option>
-                <option value="4">Fourth year or higher</option>
-            </select>
-            <br>
-            <label for="role">What is your team role</label>
-            <input list="team-role" id="role" name="role">
-            <datalist id="team-role">
-                <option value="Dev"></option>
-                <option value="Team Lead"></option>
-                <option value="Designer"></option>
-                <option value="Planner"></option>
-            </datalist>
-            <br><br>
-            <fieldset>
-                <legend>How do you feel about the course</legend>
-                    <input type="radio" id="good" name="exp" value="good">
-                    <label for="good">Good</label>
-                    <input type="radio" id="bad" name="exp" value="bad">
-                    <label for="bad">Bad</label>
-            </fieldset>
-            <br><br>
-            <label for="op">Share your opinion</label>
-            <br>
-            <textarea name="op" id="op" cols="30" rows="10"></textarea>
-            <br>
-            <button>Submit</button>
+        <div class="form">
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name">
+                <select name="year" id="year">
+                    <option value="">What is your year</option>
+                    <option value="1">First year</option>
+                    <option value="2">Second year</option>
+                    <option value="3">Third year</option>
+                    <option value="4">Fourth year or higher</option>
+                </select>
+                <br>
+                <label for="role">What is your team role</label>
+                <input list="team-role" id="role" name="role">
+                <datalist id="team-role">
+                    <option value="Dev"></option>
+                    <option value="Team Lead"></option>
+                    <option value="Designer"></option>
+                    <option value="Planner"></option>
+                </datalist>
+                <br><br>
+                <fieldset>
+                    <legend>How do you feel about the course</legend>
+                        <input type="radio" id="good" name="exp" value="good">
+                        <label for="good">Good</label>
+                        <input type="radio" id="bad" name="exp" value="bad">
+                        <label for="bad">Bad</label>
+                </fieldset>
+                <br><br>
+                <label for="op">Share your opinion</label>
+                <br>
+                <textarea name="op" id="op" cols="30" rows="10"></textarea>
+                <br>
+                <button>Submit</button>
         </form>
+        </div>
     </footer>
 </body>
 
