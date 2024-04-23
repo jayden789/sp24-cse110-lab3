@@ -1,0 +1,184 @@
+/* Color the background of the page */
+
+:root {
+    --main-color: #F0EBE3;
+}
+
+body {
+    background-color: var(--main-color, #E1F7F5);
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+}
+
+header {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+h2 {
+    font-style: italic;
+}
+
+h3 {
+    color: color(display-p3 1 0.5 0);
+    font-size: 1.5em;
+    border-bottom: 1px solid black;
+    display: inline-block;
+    padding-top: 1px;
+}
+
+h3.info {
+    color: #990000;
+    display: block;
+}
+
+nav {
+    background-color: color-mix(in srgb, #e093b7 35%, white);
+    margin-bottom: 2px;
+    margin-top: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
+}
+
+section {
+    position: relative;
+    margin-top: 50px;
+}
+.title {
+    
+    position: fixed;
+    z-index: 1000;
+    margin: 1px 1px 0 0;
+    font-size: 2em;
+    border-style: dashed solid;
+    border-width: 1mm;
+    border-color: black;
+    text-decoration: dashed;
+    text-align: center;
+    font-weight: bold;
+}
+
+img {
+    display: inline;
+    border-radius: 1cm;
+    width: 80vh;
+    margin: auto;
+    padding: auto;
+    border: 1px solid black;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 5px 0 5px;
+    margin-top: 5px;
+}
+
+#op {
+    display: block;
+    width: 500px;
+}
+
+input[type="text"] {
+    border: 1px solid #ccc;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: antiquewhite;
+    width: 100px;
+    font-size: 15px;
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+button:hover {
+    background-color: #d0aeef;
+}
+
+/* dark red when button is clicked */
+button:active {
+    background-color: #990000;
+}
+
+h3, nav {
+    padding-left: 5px;
+}
+
+header nav li {
+    font-size: 1.2em;
+}
+
+header>section {
+    font-style: italic;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+
+    header {
+        margin: 10px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5px 5px 0 5px;
+        margin-top: 5px;
+    }
+}
+
+h3~img {
+    margin-top: 20px;
+}
+
+h3+details {
+    margin-top: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(174, 14, 131);
+}
+
+/* Resize the video*/
+video {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    min-width: 300px;
+}
+
+/* New css properties :has() */
+h3:has(+ p) {
+    color: darkblue;
+}
+
+/* Nested css styles */
+footer {
+    background-color: #e0cbf4;
+    & > h3 {
+        color: rgb(149, 22, 39);
+    }
+}
+
